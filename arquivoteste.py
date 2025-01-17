@@ -17,12 +17,6 @@ tabela_ticket_medio = tabela_vendas['Valor Final'] / tabela_vendas['Quantidade']
 # Enviar um email com o relatório
 
 
-# Tabela personalizada de ticket médio
-ticket_table = PrettyTable()
-ticket_table.field_names = ["ID Loja", "Ticket Médio"]
-for index, row in tabela_ticket_medio.items():
-    ticket_table.add_row([index, f"R$ {row:.2f}"])
-
 # Tabela personalizada de faturamento
 faturamento_table = PrettyTable()
 faturamento_table.field_names = ["ID Loja", "Valor Final"]
@@ -34,6 +28,12 @@ quantidade_table = PrettyTable()
 quantidade_table.field_names = ["ID Loja", "Quantidade Vendida"]
 for index, row in tabela_quantidade.iterrows():
     quantidade_table.add_row([row.name, row['Quantidade']])
+
+# Tabela personalizada de ticket médio
+ticket_table = PrettyTable()
+ticket_table.field_names = ["ID Loja", "Ticket Médio"]
+for index, row in tabela_ticket_medio.items():
+    ticket_table.add_row([index, f"R$ {row:.2f}"])
 
 # Imprimir as tabelas
 print("\n" + "="*40)
