@@ -37,6 +37,15 @@ O objetivo deste projeto é fornecer um exemplo prático de como configurar e es
    pip install -r requirements.txt
    ```
 
+## Funcionalidades
+
+- **Importação de Dados**: Importa dados de vendas a partir de um arquivo Excel chamado `Vendas.xlsx`.
+- **Cálculo de Faturamento**: Agrupa os dados por `ID Loja` e calcula o faturamento total de cada loja.
+- **Cálculo de Quantidade Vendida**: Agrupa os dados por `ID Loja` e calcula a quantidade total de produtos vendidos por loja.
+- **Cálculo do Ticket Médio**: Calcula o ticket médio por loja, utilizando a média do valor final e da quantidade de produtos vendidos.
+- **Geração de Tabelas HTML**: Cria tabelas em formato HTML para faturamento, quantidade e ticket médio, formatando os valores monetários.
+- **Envio de E-mail**: Envia um e-mail com o relatório de vendas por loja, incluindo as tabelas HTML geradas.
+
 ## Uso
 - Execute o servidor Django:
   ```bash
